@@ -30,7 +30,7 @@ class User:
             print(" Не выполнено условие - пароль должен содержать не менее 3 символов и один из знаков _, %, #!")
 
     def __repr__(self):
-        return f'Пользователь: {self.name},\nЛогин: {self.login}'
+        return f'Пользователь: {self.name}\nЛогин: {self.login}'
 
 
 class SuperUser(User):
@@ -57,6 +57,9 @@ class SuperUser(User):
         else:
             print('Не введено значение')
 
+    def __repr__(self):
+        return f'Пользователь: {self.name}\nЛогин: {self.login}\nРоль: {self.role}'
+
 
 user_1 = User('Василий', 'vvasiliy')
 user_2 = User('Ivan', 'iiiiivan')
@@ -65,3 +68,4 @@ superuser_1 = SuperUser(name='Настя', login='inastya', role='SuperUser')
 superuser_2 = SuperUser(name='Максим', login='imax', role='SuperUser')
 
 print(user_1)
+print(superuser_2)
