@@ -17,7 +17,7 @@ class User:
 
     @property
     def password(self):
-        return None
+        raise Exception("You can not see this password")
 
     @password.setter
     def password(self, value):
@@ -69,3 +69,4 @@ superuser_2 = SuperUser(name='Максим', login='imax', role='SuperUser')
 
 print(user_1)
 print(superuser_2)
+print(superuser_2.password)
